@@ -1,7 +1,4 @@
 <?php
-    include_once '../lib/helpers.php';
-
-    if (isset($_GET['module'])) {
+    include_once '../lib/helpers.php';    
         resolve();
-    }
 ?>

@@ -39,7 +39,7 @@
             if (is_dir("../controller/$modulo")) {
                 if (file_exists("../controller/$modulo/".$controlador."Controller.php")) {
                     include_once "../controller/$modulo/".$controlador."Controller.php";
-                    $nombreClase= $controlador."Controller.php";
+                    $nombreClase= $controlador."Controller";
                     $objClase= new $nombreClase();
                     if (method_exists($objClase, $funcion)) {
                         $objClase->$funcion();
@@ -53,7 +53,7 @@
                 echo "El m&oacute;dulo especificado no existe";
             }
         } else {
-            include_once("../view/partials/dashboard.html");
+            include_once("../view/partials/dashboard.php");
         }
     }
 

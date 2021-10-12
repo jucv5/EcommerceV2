@@ -35,19 +35,26 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" name="frmSearch" method="POST" action="index.php?modulo=producto&controlador=Producto&funcion=filter">
-                    <input type="text" name="searchProd" id="searchProd" class="form-control" placeholder="Buscar producto">
-                    <button type="submit" name="btnSearch" id="btnSearch" class="btn btn-primary"><i class="bi-search me-1"></i>Buscar</button>
+                
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </div>
                 </form>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
+                <form class="navbar-form navbar-right" name="frmSearch" method="POST" action="index.php?modulo=producto&controlador=Producto&funcion=filter">
+                    <div class = "form-group">
+                        <input type="text" name="searchProd" id="searchProd" class="form-control" placeholder="Buscar producto">
+                        <button type="button" name="btnSearch" id="btnSearch" class="btn btn-primary searchCategory"><i class="bi-search me-1"></i>Buscar</button>
+                    </div>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
+
+    

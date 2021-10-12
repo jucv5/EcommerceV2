@@ -7,19 +7,22 @@
     ?>
 
     <body>
-        <!--Menu-->
         <?php
             include_once '../view/partials/menu.html';
+            
+            //include_once '../view/partials/header.html';
         ?>
-        <!--header-->
-        <?php
-            include_once '../view/partials/header.html';
-        ?>
-        <!--Dashboard-->
-        <?php
-            //include_once '../view/partials/dashboard.html';
-            resolve();            
-        ?>
+
+    <div class="container">
+        <?php include_once '../view/partials/filtro.html'; ?>        
+        
+            
+                    <?php            
+                        resolve();
+                        
+                    ?>
+    </div>
+        
         <!--Footer-->
         <?php
             include_once '../view/partials/footer.html';
