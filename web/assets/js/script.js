@@ -12,8 +12,17 @@ $(document).ready(function(){
         });
     });
 
-    $(document).on("click", "#btnSearch", function(){
-        let descProd=$("#searchProd").val();
+    $(document).on("click", "#btnSearch, .searchDescProd", function(){
+        let typesearch=$(this).attr('data-origen');
+        let descProd="";
+        
+        if(typesearch === "subcategory"){
+            descProd=$(this).text();
+        }
+        else{
+            descProd=$("#searchProd").val();
+        }
+         
      
         $.ajax({
             url: "ajax.php?modulo=producto&controlador=Producto&funcion=filter",
